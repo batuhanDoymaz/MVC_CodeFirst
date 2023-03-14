@@ -1,0 +1,37 @@
+﻿@model List<MVC_CodeFirst.ViewModels.HouseKeeperVM>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p><a href="~/HouseKeeper/AddHouseKeeper" class="btn btn-primary"> House Keeper ekle  </a></p>
+<br />
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">FirstName</th>
+            <th scope="col">LastName</th>
+            <th scope="col">İşlemler</th>
+
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th scope="row">@item.id</th>
+                <td>@item.FirstName</td>
+                <td>@item.LastName</td>
+                <td>
+
+                    @Html.ActionLink("Güncelle", "UpdateHouseKeeper", new { ID = item.id }, new { @class = "btn btn-success" })
+                    @Html.ActionLink("Sil", "DeleteHouseKeeper", new { ID = item.id }, new { @class = "btn btn-danger" })
+                </td>
+
+
+            </tr>
+        }
+
+    </tbody>
+</table>

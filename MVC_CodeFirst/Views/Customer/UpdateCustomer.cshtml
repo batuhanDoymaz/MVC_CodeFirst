@@ -1,0 +1,21 @@
+﻿@model MVC_CodeFirst.ViewModels.CustomerVM
+@{
+    ViewBag.Title = "UpdateCustomer";
+}
+
+<h2>UpdateCustomer</h2>
+
+@using (Html.BeginForm())
+{
+    <div>
+        @Html.TextBoxFor(x => x.FirstName)
+    </div>
+    <br />
+    <div>
+        @Html.TextBoxFor(x => x.LastName)
+    </div>
+    <br />
+    <div>
+        <button>Ekle</button>
+    </div>
+}

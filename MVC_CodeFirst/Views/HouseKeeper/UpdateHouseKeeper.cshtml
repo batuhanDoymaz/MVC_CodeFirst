@@ -1,0 +1,21 @@
+﻿@model MVC_CodeFirst.ViewModels.HouseKeeperVM
+@{
+    ViewBag.Title = "UpdateHouseKeeper";
+}
+
+<h2>UpdateHouseKeeper</h2>
+
+@using (Html.BeginForm())
+{
+    <div>
+        @Html.TextBoxFor(x => x.FirstName)
+    </div>
+    <br />
+    <div>
+        @Html.TextBoxFor(x => x.LastName)
+    </div>
+    <br />
+    <div>
+        <button>Ekle</button>
+    </div>
+}

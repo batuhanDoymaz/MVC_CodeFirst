@@ -1,0 +1,20 @@
+﻿@model MVC_CodeFirst.ViewModels.CustomerVM
+@{
+    ViewBag.Title = "AddCustomer";
+}
+
+<h2>AddCustomer</h2>
+
+@using (Html.BeginForm())
+{
+    <div>
+        @Html.TextBoxFor(x => x.FirstName, new { placeholder = "İsim giriniz" })
+    </div>
+    <br />
+    <div>
+        @Html.TextBoxFor(x => x.LastName, new { placeholder = "Soyisim giriniz" })
+    </div>
+    <div>
+        <button>Ekle</button>
+    </div>
+}
